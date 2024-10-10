@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power of tailwindcss</title>
+    <link rel="stylesheet" href="output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .trasform1 {
+        transform: translate(241px, 0px);
+      }
+      .exta-style{
+        word-spacing: 6px;
+        letter-spacing: 1px;
+      }
+      .js-toggle{
+        height: 177.5px;
+      }
+
+      .js-toggle-display{
+display: flex;
+      }
+
+    </style>
+  </head>
+  <body class="box-border overflow-x-hidden font-[sans-serif] w-full h-screen">
+  
+
+    <main class="flex mt-[72px] flex-col h-full w-full">
+      <nav
+      class="fixed top-0 p-3 z-10 justify-between items-center shadow-[0_1px_10px_-5px_black] lg:w-full w-screen bg-white flex"
+    >
+      <a
+        href="#"
+        title="Home"
+        class="font-bold hover:text-blue-600 flex gap-3 items-center cursor-pointer"
+      >
+        <img
+          src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%200.png"
+          alt="Not found"
+        />
+        ToDesktop
+      </a>
+  <div id="toggle" class="cursor-pointer lg:hidden absolute z-50 right-[23px] flex flex-col justify-center items-center hover:bg-[#b5b3b4] gap-[2px] p-[12px_10px] rounded-3xl ">
+    <div class="w-[15px] h-[2px] rounded-lg bg-black"></div>
+    <div class="w-[15px] h-[2px] rounded-lg bg-black"></div>
+    <div class="w-[15px] h-[2px] rounded-lg bg-black"></div>
+  </div>
+
+  <div  class="w-full lg:flex top-0 lg:right-3 lg:p-0 p-[47px] lg:top-[15px] hidden ls:static absolute lg:h-auto h-screen  bg-white items-center  flex-col gap-3  lg:flex-row  lg:w-[66%] justify-between">
+      <div id="links" class="items-center font-bold flex lg:flex-row flex-col gap-10">
+        <a class=" p-2 lg:p-0 w-full border-[1px] border-solid text-center lg:border-none lg:w-auto  hover:text-blue-600" href="#doc">Docs</a>
+        <a class=" p-2 lg:p-0 w-full border-[1px] border-solid text-center lg:border-none lg:w-auto  hover:text-blue-600" href="#testimonial">Testimonial</a>
+        <a class=" p-2 lg:p-0 w-full border-[1px] border-solid text-center lg:border-none lg:w-auto  hover:text-blue-600" href="#app">App</a>
+        <a class=" p-2 lg:p-0 w-full border-[1px] border-solid text-center lg:border-none lg:w-auto  hover:text-blue-600" href="#price">Pricing</a>
+        <a class=" p-2 lg:p-0 w-full border-[1px] border-solid text-center lg:border-none lg:w-auto  hover:text-blue-600" href="#faq">FAQs</a>
+      </div>
+      <div
+        class="cursor-pointer border-[1px] capitalize border-stone-400 hover:border-black border-solid rounded-lg flex gap-3 font-bold py-2 px-5 items-center"
+      >
+        <img
+          src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%201.svg"
+          alt="Not found"
+        />
+        electron developers
+        <i class="fa-solid fa-arrow-right"></i>
+      </div>
+    </div>
+    </nav>
+      <section
+        id="home"
+        class="bg-gradient-to-b from-[#fdf6f7] via-[#fdf6f7] to-white flex flex-col items-center pt-11"
+      >
+        <div
+          class="flex  gap-3 group bg-[#fffcdb] items-center transition-all cursor-pointer shadow[0_3px_3px_#eab308] border-[1px] border-yellow-400 shadow-[0_2px_3px_gray] hover:translate-y-[-3px] hover:shadow-[0_5px_5px_gray] rounded-md border-solid p-[5px_11px]"
+        >
+          <i
+            class="p-1 block bg-yellow-500 border-[1px] border-solid border-yellow-950 rounded-3xl"
+          ></i>
+          <span class="text-yellow-600">v0.21.1:</span>
+          <span class="text-yellow-900 font-bold">Find-in-page bug fixes</span>
+          <i
+            class="text-yellow-600 group-hover:translate-x-1 transition-all fa-solid fa-arrow-right"
+          ></i>
+        </div>
+
+        <div class="capitalize lg:p-0 p-3 my-12 text-slate-600 flex gap-8">
+          <span
+            ><i class="fa-regular fa-file-code text-sm"></i> Code optional</span
+          >
+          <span
+            ><i class="fa-solid fa-hand-back-fist"></i> drag & drop
+            builder</span
+          >
+          <span><i class="fa-solid fa-laptop"></i> windows,mac,linux</span>
+        </div>
+
+        <h1
+          class="text-[4.3rem] leading-[65px] lg:p-0 p-3 lg:w-[668px] text-[#222932] font-[Poppins, sans-serif] text-center font-bold"
+        >
+          Web app to desktop app in minutes
+        </h1>
+        <p class="lg:w-[625px] lg:p-0 p-3 text-[#222932] text-[26px] m-[45px_0]">
+          Take your web app codebase and transform it into a cross platform
+          desktop app with native functionality.
+        </p>
+
+        <div class="font-bold flex gap-5 my-5">
+          <button
+            class="py-3 rounded-lg px-6 bg-[#3238f2] hover:bg-[#1753d3] text-white"
+          >
+            Download now
+          </button>
+          <button
+            class="py-2 rounded-lg px-5 hover:border-black bg-slate-100 border-[1px] border-gray-300 border-solid"
+          >
+            Read Docs
+          </button>
+        </div>
+        <span class="font-bold my-10">APPS POWERED BY ToDESKTOP </span>
+        <div class="my-2 rotate-[90deg]">
+          <i class="fa-solid fa-arrow-right animate-bounce-x"></i>
+        </div>
+        <div class="w-full overflow-hidden">
+          <div class="w-[1764px] flex flex-col">
+            <div id="img-x1" class="flex  transition-all duration-150 ease-linear my-3 gap-6 w-[148%] px-3 h-[8rem] font-bold trasform1"
+            >
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%203.png"
+                />
+                <span>Unbounce1</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%204.png"
+                />
+                <span>LifeAt</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%205.png"
+                />
+                <span>Convy</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%206.png"
+                />
+                <span>Morgen</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%207.png"
+                />
+                <span>Campsite</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%208.png"
+                />
+                <span>Rise</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%209.png"
+                />
+                <span>ClickUp</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2010.png"
+                />
+                <span>Notion</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2011.png"
+                />
+                <span>Sunsama</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2012.png"
+                />
+                <span>Beeper</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2013.png"
+                />
+                <span>Cal</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2014.png"
+                />
+                <span>Webstudio</span>
+              </div>
+            </div>
+            <div id="img-x2" class="flex  transition-all duration-150 ease-linear my-3 gap-6 w-[148%] px-3 h-[8rem] font-bold">
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2015.png"
+                />
+                <span>Webstudio</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2016.png"
+                />
+                <span>Webstudio</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2017.png"
+                />
+                <span>Webstudio</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2018.png"
+                />
+                <span>Webstudio</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2019.png"
+                />
+                <span>Webstudio</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2021.png"
+                />
+                <span>Webstudio</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2022.png"
+                />
+                <span>Webstudio</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2023.png"
+                />
+                <span>Webstudio</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2024.png"
+                />
+                <span>Webstudio</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2025.png"
+                />
+                <span>Webstudio</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2026.png"
+                />
+                <span>Webstudio</span>
+              </div>
+              <div
+                class="border-[1px] justify-center items-center border-solid border-[#cccccc] bg-white py-4 h-full w-[123px] flex flex-col gap-3 rounded-xl"
+              >
+                <img
+                  class="object-fill h-[62%] w-[50%]"
+                  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2027.png"
+                />
+                <span>Webstudio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="opacity-0" id="doc"></span>
+      </section>
+
+      <section
+        class="flex flex-col gap-[24px_0] text-[#222932] m-[100px_72px]"
+      >
+        <h1 class="text-5xl mb-[50px] font-bold">How it works</h1>
+
+        <div
+          class="flex lg:flex-nowrap gap-6 lg:gap-0 flex-wrap justify-between border-[1px] border-[#c0c0c082] p-9 border-solid rounded-lg lg:h-[644px]"
+        >
+          <div class="flex flex-col w-auto lg:w-[618px]">
+            <h3
+              class="text-yellow-900 border-[1px] border-solid bg-[#fffcdb] rounded-md p-[7px_15px] font-bold w-[83px] mt-[0.75rem] mb-[1.75rem] border-yellow-400"
+            >
+              Step 1
+            </h3>
+            <h1 class="text-[36px] lg:w-[450px] leading-[45px]">
+              Bootstrap straight from your web app
+            </h1>
+            <p class="text-[20px] my-6">
+              Copy and paste your web app url into ToDesktop. Customise your app
+              design, app icon and window frame UI with no code.
+            </p>
+
+            <ul class="grid justify-between w-full grid-cols-2 grid-rows-3 gap-[10px_0px]"
+            >
+              <li>
+                <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+                <span
+                  class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                  >Multiple windows</span
+                >
+              </li>
+
+              <li>
+                <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+                <span
+                  class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                  >Multiple windows</span
+                >
+              </li>
+
+              <li>
+                <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+                <span
+                  class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                  >Multiple windows</span
+                >
+              </li>
+
+              <li>
+                <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+                <span
+                  class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                  >Multiple windows</span
+                >
+              </li>
+
+              <li>
+                <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+                <span
+                  class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                  >Multiple windows</span
+                >
+              </li>
+
+              <li>
+                <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+                <span
+                  class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                  >Multiple windows</span
+                >
+              </li>
+            </ul>
+          </div>
+          <img
+            src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2066.svg"
+            alt="notfound"
+          />
+        </div>
+
+        <div
+        class="flex lg:flex-nowrap flex-wrap gap-6 lg:gap-0 justify-between border-[1px] border-[#c0c0c082] p-9 border-solid rounded-lg lg:h-[644px]"
+      >
+        <div class="flex flex-col w-auto lg:w-[618px]">
+          <h3
+            class="text-yellow-900 border-[1px] border-solid bg-[#fffcdb] rounded-md p-[7px_15px] font-bold w-[83px] mt-[0.75rem] mb-[1.75rem] border-yellow-400"
+          >
+            Step 2
+          </h3>
+          <h1 class="text-[36px] lg:w-[450px] leading-[45px]">
+            Bootstrap straight from your web app
+          </h1>
+          <p class="text-[20px] my-6">
+            Copy and paste your web app url into ToDesktop. Customise your app
+            design, app icon and window frame UI with no code.
+          </p>
+
+          <ul class="grid justify-between w-full grid-cols-2 grid-rows-3 gap-[10px_0px]"
+          >
+            <li>
+              <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+              <span
+                class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                >Multiple windows</span
+              >
+            </li>
+
+            <li>
+              <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+              <span
+                class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                >Multiple windows</span
+              >
+            </li>
+
+            <li>
+              <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+              <span
+                class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                >Multiple windows</span
+              >
+            </li>
+
+            <li>
+              <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+              <span
+                class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                >Multiple windows</span
+              >
+            </li>
+
+            <li>
+              <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+              <span
+                class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                >Multiple windows</span
+              >
+            </li>
+
+            <li>
+              <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+              <span
+                class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                >Multiple windows</span
+              >
+            </li>
+          </ul>
+        </div>
+        <img
+          src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2066.svg"
+          alt="notfound"
+        />
+      </div>
+
+      <div
+          class="flex lg:flex-nowrap gap-6 lg:gap-0 flex-wrap justify-between border-[1px] border-[#c0c0c082] p-9 border-solid rounded-lg lg:h-[644px]"
+        >
+          <div class="flex flex-col w-auto lg:w-[618px]">
+            <h3
+              class="text-yellow-900 border-[1px] border-solid bg-[#fffcdb] rounded-md p-[7px_15px] font-bold w-[83px] mt-[0.75rem] mb-[1.75rem] border-yellow-400"
+            >
+              Step 3
+            </h3>
+            <h1 class="text-[36px] lg:w-[450px] leading-[45px]">
+              Bootstrap straight from your web app
+            </h1>
+            <p class="text-[20px] my-6">
+              Copy and paste your web app url into ToDesktop. Customise your app
+              design, app icon and window frame UI with no code.
+            </p>
+
+            <ul class="grid justify-between w-full grid-cols-2 grid-rows-3 gap-[10px_0px]"
+            >
+              <li>
+                <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+                <span
+                  class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                  >Multiple windows</span
+                >
+              </li>
+
+              <li>
+                <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+                <span
+                  class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                  >Multiple windows</span
+                >
+              </li>
+
+              <li>
+                <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+                <span
+                  class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                  >Multiple windows</span
+                >
+              </li>
+
+              <li>
+                <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+                <span
+                  class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                  >Multiple windows</span
+                >
+              </li>
+
+              <li>
+                <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+                <span
+                  class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                  >Multiple windows</span
+                >
+              </li>
+
+              <li>
+                <i class="mr-3 fa-solid fa-check text-gray-500"></i>
+                <span
+                  class="underline decoration-[1px cursor-pointer solid bg-gray-200] hover:decoration-gray-300 underline-offset-4"
+                  >Multiple windows</span
+                >
+              </li>
+            </ul>
+          </div>
+          <img
+            src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2066.svg"
+            alt="notfound"
+          />
+        </div>
+      </section>
+
+<section  class="flex flex-col gap-[24px_0] text-[#222932] m-[50px_72px]">
+    <h1 class="lg:w-[47rem] leading-[60px] text-[4rem] font-bold">
+    ToDesktop handles the details
+    </h1>
+
+    <div class="gap-5 sm:grid-cols-1 grid my-4 lg:grid-cols-3 lg:grid-rows-[1fr_3fr] lg:h-[500px]">
+
+        <div class="border-[1px] border-gray-300  border-solid rounded-2xl bg-[#f8fafc] p-[2rem] flex flex-col items-center gap-5 hover:bg-custom ">
+            <h3 class="text-2xl">Native notifications</h3> 
+            <img src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2037.png" alt=""> 
+        </div>
+
+        <div class=" lg:row-start-1 lg:row-end-3 border-[1px] lg:order-1 border-gray-300  border-solid rounded-2xl bg-[#f8fafc] p-[2rem] flex  flex-col items-center gap-4 hover:bg-custom ">
+            <h3 class="text-2xl">Native notifications</h3>
+            <p class=" text-[17px] leading-[21px] text-center">We’ll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features.</p>
+            <img src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2038.png" alt="">
+         </div>
+
+
+
+        <div class=" border-[1px] border-gray-300 border-solid rounded-2xl bg-[#f8fafc] p-[2rem] flex flex-col items-center gap-5 hover:bg-custom ">
+            <h3 class="text-2xl">Native notifications</h3>
+             <img src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2039.png" alt=""> 
+    </div>
+
+
+
+
+        <div class="border-[1px] border-gray-300 border-solid lg:row-start-2 lg:row-end-4 rounded-2xl bg-[#f8fafc] p-[2rem] flex flex-col items-center gap-[16px] hover:bg-custom ">
+            <h3 class="text-2xl">Native notifications</h3>
+            <p class=" text-[17px] leading-[21px] text-center">We’ll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features.</p>
+             <img class="h-[75px]" src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2040.png" alt=""> 
+            </div>
+
+
+
+        <div class="border-[1px] border-gray-300 border-solid rounded-2xl bg-[#f8fafc] p-[2rem] flex flex-col items-center lg:row-start-3 lg:row-end-4 gap-5 hover:bg-custom ">
+            <h3 class="text-2xl">Native notifications</h3> 
+            <img src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2037.png" alt=""> 
+        </div>
+
+
+        <div class="lg:row-start-2 lg:row-end-4 border-[1px] border-gray-300 border-solid rounded-2xl bg-[#f8fafc] p-[2rem] flex  flex-col items-center gap-4 hover:bg-custom ">
+            <h3 class="text-2xl">Native notifications</h3>
+            <p class=" text-[17px] leading-[21px] text-center">We’ll ensure the underlying browser is up to date and deliver performance improvements, security patches, & additional features.</p>
+            <img src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2038.png" alt="">
+         </div>
+
+
+    </div>
+
+
+    <span class="opacity-0" id="testimonial"></span>
+
+</section>
+
+<section class=" text-[#222932] m-[50px_72px] h-[300px] border-[1px] border-solid rounded-md ">
+<div class="overflow-x-hidden">
+  <div id="move-x" class="transition-all duration-150 ease-linear w-[300%] flex gap-[24px] items-center p-4">
+
+    <h4 class="text-3xl">Download Analytics</h4>
+  <span class="border-[3px] border-solid border-black rounded-3xl p-[1px] bg-black"></span>
+  
+  <h4 class="text-3xl">Best Expreance</h4>
+  <span class="border-[3px] border-solid border-black rounded-3xl p-[1px] bg-black"></span>
+  
+
+  <h4 class="text-3xl">Best review</h4>
+  <span class="border-[3px] border-solid border-black rounded-3xl p-[1px] bg-black"></span>
+  
+
+  <h4 class="text-3xl">Life time support</h4>
+  <span class="border-[3px] border-solid border-black rounded-3xl p-[1px] bg-black"></span>
+  
+  
+  <h4 class="text-3xl">Trays</h4>
+  <span class="border-[3px] border-solid border-black rounded-3xl p-[1px] bg-black"></span>
+  
+  
+  <h4 class="text-3xl">Multi-window support</h4>
+  <span class="border-[3px] border-solid border-black rounded-3xl p-[1px] bg-black"></span>
+  
+  
+  <h4 class="text-3xl">Deep Linking</h4>
+  <span class="border-[3px] border-solid border-black rounded-3xl p-[1px] bg-black"></span>
+  
+  
+  <h4 class="text-3xl">Launch at startup</h4>
+  <span class="border-[3px] border-solid border-black rounded-3xl p-[1px] bg-black"></span>
+  
+  
+  <h4 class="text-3xl">Offline Support</h4>
+  <span class="border-[3px] border-solid border-black rounded-3xl p-[1px] bg-black"></span>
+  
+  
+  </div>
+</div>
+</section>
+
+<section  class="flex flex-col gap-[24px_0] text-[#222932] m-[50px_72px]">
+<h1 class="lg:w-[47rem] leading-[60px] text-[4rem] font-bold">Customer stories</h1>
+
+<div class="rounded-xl lg:flex-nowrap flex-wrap justify-end lg:justify-between overflow-hidden flex border-[1px] border-solid border-gray-200  pt-5 pl-6">
+
+<div class="lg:w-[650px] flex flex-col gap-8 pr-6 lg:p-0">
+    <img class="w-[120px]" src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2044.svg" alt="">
+    <span class="text-[22px]">ClickUp used ToDesktop to get their desktop app in front of customers in days instead of months.</span>
+
+<div class="flex flex-wrap gap-3">
+    <span class="text-yellow-900 border-[1px] border-solid bg-[#fffcdb] rounded-md p-[7px_15px] font-bold w-auto   border-yellow-400">
+        <i class="mr-1 fa-solid fa-check"></i>
+        Chromeless UI
+    </span>
+    <span class="text-yellow-900 border-[1px] border-solid bg-[#fffcdb] rounded-md p-[7px_15px] font-bold w-auto border-yellow-400">
+        <i class="mr-1 fa-solid fa-check"></i>
+        Native spellcheck
+    </span>
+    <span class="text-yellow-900 border-[1px] border-solid bg-[#fffcdb] rounded-md p-[7px_15px] font-bold w-auto border-yellow-400">
+        <i class="mr-1 fa-solid fa-check"></i>
+        Task time in menubar
+    </span>
+    <span class="text-yellow-900 border-[1px] border-solid bg-[#fffcdb] rounded-md p-[7px_15px] font-bold w-auto border-yellow-400">
+        <i class="mr-1 fa-solid fa-check"></i>
+
+        Notification count in the dock
+    </span>
+    <span class="text-yellow-900 border-[1px] border-solid bg-[#fffcdb] rounded-md p-[7px_15px] font-bold w-autoborder-yellow-400">
+        <i class="mr-1 fa-solid fa-check"></i>
+
+        Global hotkey to create task
+    </span>
+</div>
+
+    <p class="text-xl text-gray-500">
+        “ToDesktop provided us with a <span class="text-gray-900">polished desktop app</span> in no time. Their expert team guided us through a smooth migration from our outdated legacy desktop app, enabling us to deliver<span class="text-gray-900"> new and improved features </span> to our customers within days.”
+    </p>
+
+
+    <div class="flex gap-1 ">
+        <img class="rounded-[100px] h-[50px] mr-3" src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2045.jpeg"  alt="">
+        <div >
+            <h6 class="text-black mb-2">Jone boy</h6>
+<span class="text-gray-700">founder & CEO, <a href="#" class="underline decoration-[1px dotted bg-gray-400]">ClickUp</a></span>
+        </div>
+
+    </div>
+</div>
+
+<img class="lg:w-[510px] sm:w-[full] mt-7 lg:mt-[100px]" src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2046.png" alt="">
+</div>
+
+<div class="grid lg:grid-cols-3 grid-cols-1 mt-5 gap-[29px]">
+
+<div class="flex flex-col gap-6 p-[35px] bg-[#f8fafc] hover:bg-custom  border-[1px] border-solid border-gray-200 rounded-2xl">
+    <div class="items-center flex gap-3"><i class="p-[11px_10px] block bg-blue-300 fa-solid fa-code text-indigo-900 rounded-[100px]"></i> <h2 class="text-[37px] font-bold">Native APIs</h2></div>
+<p class="text-[17px] leading-[25px]">What sets ToDesktop apart is its seamless integration with native APIs using our existing web codebase. By tapping into APIs like Tray and Notifications, we've crafted an exceptionally polished desktop user experience.</p>
+
+
+<div class="flex gap-1 ">
+   <div class="flex w-[86px]">
+    <img class="rounded-[100px] h-[50px] mr-3" src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2047.png"  alt="">
+    <img  class="translate-x-[-30px] border-[1px] border-white border-solid rounded-[100px] h-[50px] mr-3" src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2048.jpeg"  alt="">
+   </div>
+    <div class="flex flex-col ml-1">
+        <h6 class="text-black ">Rick Pastoor</h6>
+ <a href="#" class="text-gray-700  underline decoration-dotted">Rise</a>
+    </div>
+
+</div>
+</div>
+
+<div class="flex flex-col gap-6 p-[35px] bg-[#f8fafc] hover:bg-custom  border-[1px] border-solid border-gray-200 rounded-2xl">
+  <div class="items-center flex gap-3"><i class="p-[11px_10px] block bg-blue-300 fa-solid fa-code text-indigo-900 rounded-[100px]"></i> <h2 class="text-[37px] font-bold">Native APIs</h2></div>
+<p class="text-[17px] leading-[25px]">What sets ToDesktop apart is its seamless integration with native APIs using our existing web codebase. By tapping into APIs like Tray and Notifications, we've crafted an exceptionally polished desktop user experience.</p>
+
+
+<div class="flex gap-1 ">
+ <div class="flex w-[86px]">
+  <img class="rounded-[100px] h-[50px] mr-3" src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2047.png"  alt="">
+  <img  class="translate-x-[-30px] border-[1px] border-white border-solid rounded-[100px] h-[50px] mr-3" src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2048.jpeg"  alt="">
+ </div>
+  <div class="flex flex-col ml-1">
+      <h6 class="text-black ">Rick Pastoor</h6>
+<a href="#" class="text-gray-700  underline decoration-dotted">Rise</a>
+  </div>
+
+</div>
+</div>
+
+
+<div class="flex flex-col gap-6 p-[35px] bg-[#f8fafc] hover:bg-custom  border-[1px] border-solid border-gray-200 rounded-2xl">
+  <div class="items-center flex gap-3"><i class="p-[11px_10px] block bg-blue-300 fa-solid fa-code text-indigo-900 rounded-[100px]"></i> <h2 class="text-[37px] font-bold">Native APIs</h2></div>
+<p class="text-[17px] leading-[25px]">What sets ToDesktop apart is its seamless integration with native APIs using our existing web codebase. By tapping into APIs like Tray and Notifications, we've crafted an exceptionally polished desktop user experience.</p>
+
+
+<div class="flex gap-1 ">
+ <div class="flex w-[86px]">
+  <img class="rounded-[100px] h-[50px] mr-3" src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2047.png"  alt="">
+  <img  class="translate-x-[-30px] border-[1px] border-white border-solid rounded-[100px] h-[50px] mr-3" src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2048.jpeg"  alt="">
+ </div>
+  <div class="flex flex-col ml-1">
+      <h6 class="text-black ">Rick Pastoor</h6>
+<a href="#" class="text-gray-700  underline decoration-dotted">Rise</a>
+  </div>
+
+</div>
+</div>
+
+</div>
+<span class="opacity-0" id="app"></span>
+
+</section>
+
+
+<section class="flex justify-between gap-[24px_0] text-[#ffffff] m-[100px_72px_0px] h:auto lg:flex-nowrap flex-wrap lg:h-[700px] bg-black pl-7 pt-11 rounded-xl" >
+
+    <div class="flex w-full lg:w-[513px] flex-col pr-7 lg:p-0 gap-[1.55rem] ">
+<h5 class="text-gray-400">READY TO START BUILDING?</h5>
+
+<h1 class="text-5xl ">Create your desktop app for free*</h1>
+
+<p class="text-gray-400 text-xl ">ToDesktop Builder will take you step-by-step through the process of creating your first desktop app in just a few minutes</p>
+
+<a href="#" download="App" class="bg-blue-700 rounded-xl py-4 flex items-center justify-center gap-3 hover:bg-blue-800">
+    <i class="fa-solid fa-download "></i>
+    <span >Download ToDestop Builder</span>
+</a>
+
+<p class="text-gray-400 text-[13px] ">*You can create a desktop app and run it on your computer for free. You will only be charged if you want to create a distributable app for your customers.</p>
+    </div>
+    <img class="lg:w-[510px] w-[full] mt-7 lg:mt-[100px]" src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2046.png" alt="">
+    
+  </section>
+  <span class="opacity-0 mb-[100px]" id="price"></span>
+
+      <section
+        class="flex flex-col gap-[24px_0] text-[#222932] m-[50px_72px]"
+      >
+        <h1 class="lg:w-[40rem] leading-[60px] text-[4rem] font-bold">
+          Choose a plan that fits your needs
+        </h1>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-3">
+          <div class="flex flex-col gap-5 p-[40px] rounded-md bg-[#f8fafc]">
+            <h2 class="text-4xl font-bold">Free</h2>
+            <p class="text-[20px] text-gray-500">
+              For personal use or testing your app before deploying to
+              customers.
+            </p>
+            <span class="uppercase text-[17px]">key features</span>
+            <ul class="flex flex-col gap-[13px] text-gray-500">
+              <li>
+                <i class="fa-solid fa-check text-gray-500 mr-3"></i
+                ><span>Free for personal use</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check text-gray-500 mr-3"></i
+                ><span>Free for personal use</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-xmark text-gray-500 mr-3"></i
+                ><span>Free for personal use</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-xmark text-gray-500 mr-3"></i
+                ><span>Free for personal use</span>
+              </li>
+            </ul>
+            <button
+              class="w-full py-3 text-blue-600 border-[1px] border-gray-300 rounded-lg border-solid font-bold hover:border-black"
+            >
+              Read Docs
+            </button>
+          </div>
+
+          <div class="flex flex-col gap-5 p-[40px] rounded-md bg-[#f8fafc]">
+            <h2 class="text-4xl font-bold">Essential</h2>
+            <p class="text-[20px] text-gray-500">For simple desktop apps.</p>
+            <h3 class="text-xl">
+              <span class="text-2xl font-bold">₹100</span>/month
+            </h3>
+            <span class="uppercase text-[17px]">key features</span>
+            <ul class="flex flex-col gap-[13px] text-gray-500">
+              <li>
+                <i class="fa-solid fa-check text-gray-500 mr-3"></i
+                ><span>Free for personal use</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check text-gray-500 mr-3"></i
+                ><span>Free for personal use</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-xmark text-gray-500 mr-3"></i
+                ><span>Free for personal use</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-xmark text-gray-500 mr-3"></i
+                ><span>Free for personal use</span>
+              </li>
+            </ul>
+            <button
+              class="w-full py-3 text-blue-600 border-[1px] border-gray-300 rounded-lg border-solid font-bold hover:border-black"
+            >
+              Read Docs
+            </button>
+          </div>
+
+          <div class='flex flex-col gap-5 p-[40px] before:content-["Most-popular"] relative before:rounded-2xl before:top-[-18px] before:absolute before:right-[-16px] before:text-blue-700 before:bg-blue-300 before:p-[5px_14px] before:font-bold  rounded-md bg-[#f8fafc]'>
+            <h2 class="text-4xl font-bold">Professional</h2>
+            <p class="text-[20px] text-gray-500">
+              For sophisticated desktop apps.
+            </p>
+            <h3 class="text-xl">
+              <span class="text-2xl font-bold">₹300</span>/month
+            </h3>
+            <span class="uppercase text-[17px]">key features</span>
+            <ul class="flex flex-col gap-[13px] text-gray-500">
+              <li>
+                <i class="fa-solid fa-check text-gray-500 mr-3"></i
+                ><span>Free for personal use</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-check text-gray-500 mr-3"></i
+                ><span>Free for personal use</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-xmark text-gray-500 mr-3"></i
+                ><span>Free for personal use</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-xmark text-gray-500 mr-3"></i
+                ><span>Free for personal use</span>
+              </li>
+            </ul>
+            <button
+              class="w-full py-3 text-white bg-blue-600 rounded-lg font-bold hover:bg-blue-700"
+            >
+              Read Docs
+            </button>
+          </div>
+        </div>
+        <span id="faq" class="opacity-0"></span>
+    </section>
+
+
+
+      <footer>
+        <section class=" text-[#222932] m-[50px_72px]">
+          <h1 class="text-[4rem] font-bold">FAQs</h1>
+          <div class="lg:grid-rows-3 grid grid-cols-1 lg:grid-cols-2 gap-5 my-4">
+            <div
+    class="cursor-pointer border-[1px] overflow-hidden h-[69px] border-gray-300 border-solid py-5 px-5 flex flex-col gap-5 rounded-2xl bg-[#f9fafb] transition-all"
+  >
+              <div class="flex justify-between items-center">
+                <h4 class="text-[19px] text-black">
+                  Is ToDesktop For Me?
+                </h4>
+                <i class="fa-solid fa-chevron-up transition-transform rotate-180"></i>
+              </div>
+              <p class="text-[18px] exta-style">
+                That depends! If you would like to distribute your web app to
+                your users as a downloadable desktop app then ToDesktop is for
+                you.
+              </p>
+            </div>
+
+            <div
+            class="cursor-pointer border-[1px] overflow-hidden h-[69px] border-gray-300 border-solid py-5 px-5 flex flex-col gap-5 rounded-2xl bg-[#f9fafb] transition-all"
+          >
+            <div class="flex justify-between items-center">
+              <h4 class="text-[19px] text-black">
+                Is ToDesktop For Me?
+              </h4>
+              <i class="fa-solid fa-chevron-up transition-transform rotate-180"></i>
+            </div>
+            <p class="text-[18px] exta-style">
+              That depends! If you would like to distribute your web app to
+              your users as a downloadable desktop app then ToDesktop is for
+              you.
+            </p>
+          </div>
+          <div
+          class="cursor-pointer border-[1px] overflow-hidden h-[69px] border-gray-300 border-solid py-5 px-5 flex flex-col gap-5 rounded-2xl bg-[#f9fafb] transition-all"
+        >
+          <div class="flex justify-between items-center">
+            <h4 class="text-[19px] text-black">
+              Is ToDesktop For Me?
+            </h4>
+            <i class="fa-solid fa-chevron-up transition-transform rotate-180"></i>
+          </div>
+          <p class="text-[18px] exta-style">
+            That depends! If you would like to distribute your web app to
+            your users as a downloadable desktop app then ToDesktop is for
+            you.
+          </p>
+        </div>
+        <div
+        class="cursor-pointer border-[1px] overflow-hidden h-[69px] border-gray-300 border-solid py-5 px-5 flex flex-col gap-5 rounded-2xl bg-[#f9fafb] transition-all"
+      >
+        <div class="flex justify-between items-center">
+          <h4 class="text-[19px] text-black">
+            Is ToDesktop For Me?
+          </h4>
+          <i class="fa-solid fa-chevron-up transition-transform rotate-180"></i>
+        </div>
+        <p class="text-[18px] exta-style">
+          That depends! If you would like to distribute your web app to
+          your users as a downloadable desktop app then ToDesktop is for
+          you.
+        </p>
+      </div>
+      <div
+      class="cursor-pointer border-[1px] overflow-hidden h-[69px] border-gray-300 border-solid py-5 px-5 flex flex-col gap-5 rounded-2xl bg-[#f9fafb] transition-all"
+    >
+      <div class="flex justify-between items-center">
+        <h4 class="text-[19px] text-black">
+          Is ToDesktop For Me?
+        </h4>
+        <i class="fa-solid fa-chevron-up transition-transform rotate-180"></i>
+      </div>
+      <p class="text-[18px] exta-style">
+        That depends! If you would like to distribute your web app to
+        your users as a downloadable desktop app then ToDesktop is for
+        you.
+      </p>
+    </div>
+    <div
+    class="cursor-pointer border-[1px] overflow-hidden h-[69px] border-gray-300 border-solid py-5 px-5 flex flex-col gap-5 rounded-2xl bg-[#f9fafb] transition-all"
+  >
+    <div class="flex justify-between items-center">
+      <h4 class="text-[19px] text-black">
+        Is ToDesktop For Me?
+      </h4>
+      <i class="fa-solid fa-chevron-up transition-transform rotate-[180deg]"></i>
+    </div>
+    <p class="text-[18px] exta-style">
+      That depends! If you would like to distribute your web app to
+      your users as a downloadable desktop app then ToDesktop is for
+      you.
+    </p>
+  </div>
+
+          </div>
+        </section>
+
+        <section class=" text-[#222932] m-[100px_72px]">
+
+
+          <div class= " flex flex-wrap gap-3 lg:flex-nowrap items-center bg-[#f9fafb]  justify-between p-[30px_40px]">
+          <a href="#" title="Home" class=" lg:order-[0] order-2 font-bold hover:text-blue-600 w-auto flex gap-3 items-center cursor-pointer">
+            <img  src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%200.png" alt="Not found">
+            ToDesktop
+          </a>
+
+          <div class="flex flex-wrap lg:order: 2 lg:justify-normal justify-center gap-5">
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-twitter"></i></a>
+
+
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fa-brands fa-github"></i></a>
+  
+            <a href="#">Documentation</a>
+          </div>
+        
+        </div>
+
+        <div class="flex items-center m-[50px_72px] flex-col gap-5">
+          <span class="flex gap-2 text-gray-700 text-xs">
+            <img class="w-[15px]" src="https://anuj-kumar-sharma.github.io/tailwind-landing-page/assets/asset%2054.svg" alt="Logo dont found"> A Y Combinator company.</span>
+
+          <span class= "text-xs text-gray-400">&copy 2024 ToDesktop, Inc. All rights reserved.</span>
+        </div>
+     
+        </section>
+      </footer>
+    </main>
+
+
+    <script>
+
+let img_x1=document.querySelector("#img-x1");
+let img_x2=document.querySelector("#img-x2");
+let letter_x=document.querySelector("#move-x");
+
+let x_axies=window.pageYOffset;
+img_x1.style.transform="translateX(-451.8px)";
+img_x1.style.transform="translateX(-248.2px)";
+letter_x.style.transform="translateX(-248px)";
+
+window.addEventListener("scroll", e => {
+  x_axies= window.pageYOffset; // pageYOffset tracks how far you've scrolled vertically
+
+
+  let newvalue = x_axies  / 500 * 100; 
+    if ( x_axies <= 5200) {
+        img_x1.style.transform = `translateX(${newvalue - 500}px) `; // Apply translation with px unit
+        img_x2.style.transform = `translateX( -${newvalue + 200}px) `; // Apply translation with px unit
+        console.log(newvalue);
+    }
+letter_x.style.transform=`translateX(-${newvalue}px)`;
+
+});
+
+
+let toggle=document.querySelector("#toggle");
+let Adiv=document.querySelector("#links");
+
+toggle.addEventListener("click",()=>{
+  Adiv.parentElement.classList.toggle("js-toggle-display");
+
+})
+
+for(let a of Adiv.children){
+  a.addEventListener("click",()=>{
+  Adiv.parentElement.classList.toggle("js-toggle-display");
+});
+}
+
+
+
+        let faqs=document.querySelectorAll(".exta-style");
+        faqs.forEach(e=>{
+            e.parentElement.addEventListener("click",(p)=>{
+e.parentElement.classList.toggle("js-toggle");
+            });   
+        });
+
+    </script>
+  </body>
+</html>
